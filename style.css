@@ -1,5 +1,5 @@
 /* Import Roboto from Google Fonts */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 
 #centered {
   position: absolute;
@@ -12,4 +12,55 @@ html {
     font-size: 2.5em;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+}
+
+#smallprint {
+    font-size: 0.2em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: lightgray;
+    /* put it in the bottom left corner with a tiny bit of padding */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.5em;
+}
+
+/* Make #smallprint larger on smaller screens */
+@media screen and (max-width: 600px) {
+    #smallprint {
+        font-size: 0.5em;
+        /* with an animation */
+        -webkit-animation: smallprint-animation 1s linear infinite;
+        -moz-animation: smallprint-animation 1s linear infinite;
+        -ms-animation: smallprint-animation 1s linear infinite;
+        -o-animation: smallprint-animation 1s linear infinite;
+        animation: smallprint-animation 1s linear infinite;
+    }
+}
+
+#smallprint:hover {
+    font-size: 0.3em;
+    /* with an animation */
+    -webkit-animation: smallprint-animation 1s linear infinite;
+    -moz-animation: smallprint-animation 1s linear infinite;
+    -ms-animation: smallprint-animation 1s linear infinite;
+    -o-animation: smallprint-animation 1s linear infinite;
+    animation: smallprint-animation 1s linear infinite;
+}
+
+
+
+/* Make the links blend in with the text */
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+/* Make sure the links are visible on hover */
+a:hover {
+    color: black;
+    text-decoration: underline;
+    /* with a bit of animation */
+    transition: all 0.2s ease-in-out;
 }
